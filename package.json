@@ -1,0 +1,35 @@
+{
+    "name": "ga-gtag",
+    "version": "1.0.0",
+    "description": "ES module for the Google Analytics Global Site Tag.",
+    "license": "MIT",
+    "repository": "idmadj/ga-gtag",
+    "main": "lib/index.js",
+    "scripts": {
+        "build": "babel src -d lib",
+        "build:watch": "babel src -d lib -w",
+        "prepublishOnly": "npm run build"
+    },
+    "keywords": [
+        "google",
+        "analytics",
+        "tracking",
+        "global",
+        "site",
+        "tag",
+        "gtag",
+        "gtag.js",
+        "ga",
+        "es",
+        "es6",
+        "module",
+        "npm",
+        "package"
+    ],
+    "devDependencies": {
+        "@babel/cli": "^7.2.3",
+        "@babel/core": "^7.4.0",
+        "@babel/preset-env": "^7.4.2",
+        "babel-preset-minify": "^0.5.0"
+    }
+}
