@@ -24,6 +24,11 @@ install('UA-#########-#');    // Substitute your tracking ID
 ```
 `install()` adds the Global Site Tag script element into `<head>`. It only needs to be called once, but can safely be called multiple times (the script won't be re-added).
 
+`install()` also has a second, optional argument that can be used to specify additional config info for the initialization (for instance to [disable pageview measurement](https://developers.google.com/analytics/devguides/collection/gtagjs#disable_pageview_measurement)):
+```js
+install('UA-#########-#', { 'send_page_view': false });
+```
+
 From there `gtag()` can be used as specified in Google's doc:
 ```js
 gtag('event', 'login', { 'method': 'Google' });

@@ -1,6 +1,6 @@
 {
     "name": "ga-gtag",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "description": "ES module for the Google Analytics Global Site Tag.",
     "license": "MIT",
     "repository": "idmadj/ga-gtag",
@@ -27,8 +27,8 @@
         "package"
     ],
     "devDependencies": {
-        "@babel/cli": "^7.5.5",
-        "@babel/core": "^7.5.5",
-        "@babel/preset-env": "^7.5.5"
+        "@babel/cli": "^7.14.3",
+        "@babel/core": "^7.14.3",
+        "@babel/preset-env": "^7.14.4"
     }
 }

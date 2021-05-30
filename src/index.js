@@ -1,4 +1,4 @@
-export const install = (trackingId, options = {}) => {
+export const install = (trackingId, additionalConfigInfo = {}) => {
     const scriptId = 'ga-gtag';
 
     if (document.getElementById(scriptId)) return;
@@ -14,7 +14,7 @@ export const install = (trackingId, options = {}) => {
     window.dataLayer = window.dataLayer || [];
 
     gtag('js', new Date());
-    gtag('config', trackingId, options);
+    gtag('config', trackingId, additionalConfigInfo);
 };
 
 export const gtag = function() {
