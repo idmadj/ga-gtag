@@ -27,8 +27,8 @@
         "package"
     ],
     "devDependencies": {
-        "@babel/cli": "^7.15.7",
-        "@babel/core": "^7.15.5",
-        "@babel/preset-env": "^7.15.6"
+        "@babel/cli": "^7.17.6",
+        "@babel/core": "^7.17.8",
+        "@babel/preset-env": "^7.16.11"
     }
 }
