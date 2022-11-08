@@ -10,26 +10,20 @@ $ npm install --save ga-gtag
 ```
 
 ## Usage
-Pick your favorite:
 ```js
-const { gtag, install } = require("ga-gtag");
-```
-```js
-import gtag, { install } from 'ga-gtag';
-```
+import { gtag, install } from 'ga-gtag';
 
-... then:
-```js
-install('UA-#########-#');    // Substitute your tracking ID
+// Substitute your tracking ID (begins with "G-", "UA-", "AW-" or "DC-")
+install('G-##########'); 
 ```
 `install()` adds the Global Site Tag script element into `<head>`. It only needs to be called once, but can safely be called multiple times (the script won't be re-added).
 
-`install()` also has a second, optional argument that can be used to specify additional config info for the initialization (for instance to [disable pageview measurement](https://developers.google.com/analytics/devguides/collection/gtagjs#disable_pageview_measurement)):
+`install()` also has a second, optional argument that can be used to specify additional config info for the initialization (for instance to [disable pageview measurement](https://developers.google.com/analytics/devguides/collection/ga4/views?technology=websites#disable_pageviews)):
 ```js
-install('UA-#########-#', { 'send_page_view': false });
+install('G-##########', { 'send_page_view': false });
 ```
 
-From there `gtag()` can be used as specified in Google's doc:
+From there, `gtag()` can be used as specified in [Google's documentation](https://developers.google.com/tag-platform/gtagjs/configure):
 ```js
 gtag('event', 'login', { 'method': 'Google' });
 ```
