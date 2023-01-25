@@ -6,7 +6,6 @@ export const install = (trackingId, additionalConfigInfo = {}) => {
     const {head} = document;
     const script = document.createElement('script');
     script.id = scriptId;
-    script.type = 'text/javascript';
     script.async = true;
     script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
     head.insertBefore(script, head.firstChild);
