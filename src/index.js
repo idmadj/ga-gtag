@@ -1,3 +1,7 @@
+export const initDataLayer = () => {
+    window.dataLayer = window.dataLayer || [];
+};
+
 export const install = (trackingId, additionalConfigInfo = {}) => {
     const scriptId = 'ga-gtag';
 
@@ -10,7 +14,7 @@ export const install = (trackingId, additionalConfigInfo = {}) => {
     script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
     head.insertBefore(script, head.firstChild);
 
-    window.dataLayer = window.dataLayer || [];
+    initDataLayer();
 
     gtag('js', new Date());
     gtag('config', trackingId, additionalConfigInfo);

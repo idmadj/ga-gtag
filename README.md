@@ -27,3 +27,15 @@ From there, `gtag()` can be used as specified in [Google's documentation](https:
 ```js
 gtag('event', 'login', { 'method': 'Google' });
 ```
+
+If you need to call `gtag()` before the Global Site Tag script is installed (for instance, to [manage consent settings](https://developers.google.com/tag-platform/security/guides/consent) in consent mode), import and call `initDataLayer()` first:
+```js
+import { gtag, initDataLayer, install } from 'ga-gtag';
+
+initDataLayer();
+gtag('consent', 'default', {
+  'ad_storage': 'denied',
+  'analytics_storage': 'denied'
+});
+install('G-##########');
+```
